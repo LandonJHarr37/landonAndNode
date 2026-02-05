@@ -1,0 +1,101 @@
+<!-- Landon Harrison, version 1 -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+	<link rel="stylesheet" href="./stylesheets/prettycheesecake.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/> </script>
+	<script type="text/javascript" src=".\public\javascripts\myFunc.js"> </script>
+	<script type="text/javascript" src=".\public\javascripts\monthChange.js"></script>
+				
+			
+</head>
+	
+
+<!-- Title  -->
+<h1 class="h1"> Cheesecake Order Form </h1> 
+
+<!-- images of cheesecake options with captions -->
+<div class="row">
+	<div class ="column">
+		<img src="https://www.momontimeout.com/wp-content/uploads/2023/09/no-bake-peanut-butter-cheesecake-square.jpeg" width="300" height="350"> 
+		<figcaption>Peanut Butter</figcaption>
+	</div>
+	<div class ="column">
+		<img src="https://ofbatteranddough.com/wp-content/uploads/2021/07/1200-New-York-Cheesecake-6-720x540.jpg" width="300" height="300"> 
+		<figcaption>Plain</figcaption>
+	</div>
+	<div class ="column">
+		<img src="https://www.cookedandloved.com/wp-content/uploads/2023/12/mango-cheesecake-recipe-feature-2.jpg" width="300" height="250"> 
+		<figcaption>Mango</figcaption>
+	</div>
+</div>
+
+<!--this will become the thank you note and order details when order is submitted-->
+<p id="thankYou"></p>
+
+<!-- List of cheesecake flavor options as radio -->
+<div id="cheesecakeType">
+  <p>Cheesecake flavor</p>
+  <form>
+	   <input type="radio" id="plain" name="flavor" value="Plain">
+	   <label for="plain">Plain</label><br>
+	   <input type="radio" id="pb" name="flavor" value="Peanut Butter">
+	   <label for="pb">Peanut Butter</label><br>
+	  <input type="radio" id="mango" name="flavor" value="Mango">
+	  <label for="mango">Mango</label><br>
+  </form>
+</div>
+
+<!-- dropdown to choose quantity of cheesecake, limited to 5 per order -->
+<p id="quantityWord">Quantity</p>
+<select name="quantity" id="quantitySlid">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+</select>
+
+<!-- text box to input any additional notes or requests -->
+<p id="notesWord">Notes:</p>
+<textarea name="notes" id="notes" rows="5" columns="100" style="width:400px; height:100px;">
+Notes or special requests here.
+</textarea>
+<br>
+
+<!-- Order button -->
+<button type="button" id="orderBut" onclick="myfunc()">Order</button>
+
+
+<!--Below is the html code for my dropdown menu to choose orders from specified month-->
+<br>
+<p2>Orders for</p2>
+<!-- inspired by How TO - Hoverable Dropdown [https://www.w3schools.com/howto/howto_css_dropdown.asp] -->
+<div class="dropdown">
+	<button class="dropbtn" id="monthDrp" >Jan</button>
+	<div class="dropdown-content">
+		<a href="#" onclick="monthChange(this)" name="Jan">Jan</a>
+		<a href="#" onclick="monthChange(this)" name="Feb">Feb</a>
+		<a href="#" onclick="monthChange(this)" name="Mar">Mar</a>
+		<a href="#" onclick="monthChange(this)" name="Apr">Apr</a>
+		<a href="#" onclick="monthChange(this)" name="May">May</a>
+		<a href="#" onclick="monthChange(this)" name="Jun">Jun</a>
+		<a href="#" onclick="monthChange(this)" name="Jul">Jul</a>
+		<a href="#" onclick="monthChange(this)" name="Aug">Aug</a>
+		<a href="#" onclick="monthChange(this)" name="Sep">Sep</a>
+		<a href="#" onclick="monthChange(this)" name="Oct">Oct</a>
+		<a href="#" onclick="monthChange(this)" name="Nov">Nov</a>
+		<a href="#" onclick="monthChange(this)" name="Dec">Dec</a>
+	</div>
+</div>
+
+<ul>
+	<li>15 plain cheesecakes</li>
+	<li>8 peanut butter cheesecakes</li>
+	<li>25 mango cheesecakes</li>
+</ul>
+
+</body>
+</html>
