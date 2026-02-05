@@ -1,3 +1,5 @@
+	/* Landon Harrison */
+
 	//Function to check for words in special requests box, thank user for ordering,
 	//and detail their order when finished
 	function myfunc(){
